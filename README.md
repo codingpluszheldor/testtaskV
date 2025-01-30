@@ -1,6 +1,7 @@
 # testtaskV
 
 ## Структура проекта
+```
 .
 ├───bin - Сборка для debug
 ├───common - Исходники служебных модулей
@@ -30,3 +31,4 @@
     ├───sqldrivers
     ├───styles
     └───translations
+```
