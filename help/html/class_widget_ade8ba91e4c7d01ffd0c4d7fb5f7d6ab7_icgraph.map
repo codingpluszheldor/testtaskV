@@ -1,0 +1,7 @@
+<map id="Widget::signalDeleteCounter" name="Widget::signalDeleteCounter">
+<area shape="rect" id="node1" title="Удаление счётчика" alt="" coords="389,31,579,57"/>
+<area shape="rect" id="node2" href="$class_application.html#a8cf8941c8db90117d3735bce5ae1fdf4" title="Запуск цикла событий" alt="" coords="197,5,309,32"/>
+<area shape="rect" id="node4" href="$class_widget.html#a8377ffd3dd889f88412717fe93c72df0" title="Удаление счётчика из таблицы" alt="" coords="165,56,341,83"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="36,5,87,32"/>
+<area shape="rect" id="node5" href="$class_widget.html#ace1aa23652eb4425355a81760b39fd37" title=" " alt="" coords="5,56,117,83"/>
+</map>

@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TestTaskV: Исходный файл /media/andi/disk3/Andi/Test/TestTaskV/common/DbModelBase/dbmodelbase.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TestTaskV
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bdd9a5d540de89e9fe90efdfc6973a4f.html">common</a></li><li class="navelem"><a class="el" href="dir_fd95e3851b7279f77020ad34f19fe6a4.html">DbModelBase</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">dbmodelbase.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="dbmodelbase_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MODEL_BASE_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define MODEL_BASE_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QStringList&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QSqlQuery&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QSqlError&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;QDateTime&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="dbconnection_8h.html">DbConnection/dbconnection.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="db__connection__params_8h.html">include/db_connection_params.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacedb.html">db</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classdb_1_1_db_model_base.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdb_1_1_db_model_base.html">DbModelBase</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classdb_1_1_db_model_base.html#ab815f31c917e1074ab9c1077c6f7410d">   22</a></span>&#160;    <span class="keyword">const</span> QString <a class="code" href="classdb_1_1_db_model_base.html#ab815f31c917e1074ab9c1077c6f7410d">_alias</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classdb_1_1_db_model_base.html#aea89efc37cfc6d26ce2fae95be8117e5">   23</a></span>&#160;    <span class="keyword">mutable</span> QString <a class="code" href="classdb_1_1_db_model_base.html#aea89efc37cfc6d26ce2fae95be8117e5">_error</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classdb_1_1_db_model_base.html#aa34b6560548f93cc35ddf89deb8507b3">   24</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="structdb_1_1_db_connection_params.html">DbConnectionParams</a> <a class="code" href="classdb_1_1_db_model_base.html#aa34b6560548f93cc35ddf89deb8507b3">_params</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classdb_1_1_db_model_base.html#a3abb03a3ea67de2cf2a4af292f45c002">DbModelBase</a>(<span class="keyword">const</span> QString &amp;alias, <span class="keyword">const</span> <a class="code" href="structdb_1_1_db_connection_params.html">DbConnectionParams</a> &amp;params) noexcept;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classdb_1_1_db_model_base.html#afecaaab6e2d52b1e14bd0c75d14e90de">~DbModelBase</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classdb_1_1_db_model_base.html#a792cb1d49dafd305d87b3aca47d70f93">setConnection</a>() noexcept;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdb_1_1_db_model_base.html#a49674f97a7669bfb183032ce56853cae">closeConnection</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classdb_1_1_db_model_base.html#a1de98f7dae3416744a40ada8917acc56">isOpen</a>() const;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classdb_1_1_db_model_base.html#aaf45187d86501c23ca0ffee917fdc99f">   50</a></span>&#160;    virtual QString <a class="code" href="classdb_1_1_db_model_base.html#aaf45187d86501c23ca0ffee917fdc99f">errorText</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classdb_1_1_db_model_base.html#aea89efc37cfc6d26ce2fae95be8117e5">_error</a>; }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classdb_1_1_db_model_base.html#aeb6224dee511d65cc735cbded10760d3">   56</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classdb_1_1_db_model_base.html#aeb6224dee511d65cc735cbded10760d3">setErrorText</a>(<span class="keyword">const</span> QString &amp;txt) { <a class="code" href="classdb_1_1_db_model_base.html#aea89efc37cfc6d26ce2fae95be8117e5">_error</a> = txt; }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// MODEL_BASE_H</span></div>
+<div class="ttc" id="aclassdb_1_1_db_model_base_html"><div class="ttname"><a href="classdb_1_1_db_model_base.html">db::DbModelBase</a></div><div class="ttdoc">Базовая модель данных для БД</div><div class="ttdef"><b>Definition:</b> <a href="dbmodelbase_8h_source.html#l00019">dbmodelbase.h:20</a></div></div>
+<div class="ttc" id="aclassdb_1_1_db_model_base_html_a1de98f7dae3416744a40ada8917acc56"><div class="ttname"><a href="classdb_1_1_db_model_base.html#a1de98f7dae3416744a40ada8917acc56">db::DbModelBase::isOpen</a></div><div class="ttdeci">bool isOpen() const</div><div class="ttdoc">Проверка соединения с БД</div><div class="ttdef"><b>Definition:</b> <a href="dbmodelbase_8cpp_source.html#l00039">dbmodelbase.cpp:39</a></div></div>
+<div class="ttc" id="aclassdb_1_1_db_model_base_html_a3abb03a3ea67de2cf2a4af292f45c002"><div class="ttname"><a href="classdb_1_1_db_model_base.html#a3abb03a3ea67de2cf2a4af292f45c002">db::DbModelBase::DbModelBase</a></div><div class="ttdeci">DbModelBase(const QString &amp;alias, const DbConnectionParams &amp;params) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="dbmodelbase_8cpp_source.html#l00005">dbmodelbase.cpp:5</a></div></div>
+<div class="ttc" id="aclassdb_1_1_db_model_base_html_a49674f97a7669bfb183032ce56853cae"><div class="ttname"><a href="classdb_1_1_db_model_base.html#a49674f97a7669bfb183032ce56853cae">db::DbModelBase::closeConnection</a></div><div class="ttdeci">void closeConnection()</div><div class="ttdoc">Закрытие cоединение с БД</div><div class="ttdef"><b>Definition:</b> <a href="dbmodelbase_8cpp_source.html#l00034">dbmodelbase.cpp:34</a></div></div>
+<div class="ttc" id="aclassdb_1_1_db_model_base_html_a792cb1d49dafd305d87b3aca47d70f93"><div class="ttname"><a href="classdb_1_1_db_model_base.html#a792cb1d49dafd305d87b3aca47d70f93">db::DbModelBase::setConnection</a></div><div class="ttdeci">bool setConnection() noexcept</div><div class="ttdoc">Соединение с БД</div><div class="ttdef"><b>Definition:</b> <a href="dbmodelbase_8cpp_source.html#l00017">dbmodelbase.cpp:17</a></div></div>
+<div class="ttc" id="aclassdb_1_1_db_model_base_html_aa34b6560548f93cc35ddf89deb8507b3"><div class="ttname"><a href="classdb_1_1_db_model_base.html#aa34b6560548f93cc35ddf89deb8507b3">db::DbModelBase::_params</a></div><div class="ttdeci">const DbConnectionParams _params</div><div class="ttdef"><b>Definition:</b> <a href="dbmodelbase_8h_source.html#l00024">dbmodelbase.h:24</a></div></div>
+<div class="ttc" id="aclassdb_1_1_db_model_base_html_aaf45187d86501c23ca0ffee917fdc99f"><div class="ttname"><a href="classdb_1_1_db_model_base.html#aaf45187d86501c23ca0ffee917fdc99f">db::DbModelBase::errorText</a></div><div class="ttdeci">virtual QString errorText() const</div><div class="ttdoc">Возвращает текст ошибки при выполнении запросов к БД</div><div class="ttdef"><b>Definition:</b> <a href="dbmodelbase_8h_source.html#l00050">dbmodelbase.h:50</a></div></div>
+<div class="ttc" id="aclassdb_1_1_db_model_base_html_ab815f31c917e1074ab9c1077c6f7410d"><div class="ttname"><a href="classdb_1_1_db_model_base.html#ab815f31c917e1074ab9c1077c6f7410d">db::DbModelBase::_alias</a></div><div class="ttdeci">const QString _alias</div><div class="ttdef"><b>Definition:</b> <a href="dbmodelbase_8h_source.html#l00022">dbmodelbase.h:22</a></div></div>
+<div class="ttc" id="aclassdb_1_1_db_model_base_html_aea89efc37cfc6d26ce2fae95be8117e5"><div class="ttname"><a href="classdb_1_1_db_model_base.html#aea89efc37cfc6d26ce2fae95be8117e5">db::DbModelBase::_error</a></div><div class="ttdeci">QString _error</div><div class="ttdef"><b>Definition:</b> <a href="dbmodelbase_8h_source.html#l00023">dbmodelbase.h:23</a></div></div>
+<div class="ttc" id="aclassdb_1_1_db_model_base_html_aeb6224dee511d65cc735cbded10760d3"><div class="ttname"><a href="classdb_1_1_db_model_base.html#aeb6224dee511d65cc735cbded10760d3">db::DbModelBase::setErrorText</a></div><div class="ttdeci">virtual void setErrorText(const QString &amp;txt)</div><div class="ttdoc">Устанавливает текст ошибки при выполнении запросов к БД</div><div class="ttdef"><b>Definition:</b> <a href="dbmodelbase_8h_source.html#l00056">dbmodelbase.h:56</a></div></div>
+<div class="ttc" id="aclassdb_1_1_db_model_base_html_afecaaab6e2d52b1e14bd0c75d14e90de"><div class="ttname"><a href="classdb_1_1_db_model_base.html#afecaaab6e2d52b1e14bd0c75d14e90de">db::DbModelBase::~DbModelBase</a></div><div class="ttdeci">virtual ~DbModelBase()</div><div class="ttdef"><b>Definition:</b> <a href="dbmodelbase_8cpp_source.html#l00011">dbmodelbase.cpp:11</a></div></div>
+<div class="ttc" id="adb__connection__params_8h_html"><div class="ttname"><a href="db__connection__params_8h.html">db_connection_params.h</a></div></div>
+<div class="ttc" id="adbconnection_8h_html"><div class="ttname"><a href="dbconnection_8h.html">dbconnection.h</a></div></div>
+<div class="ttc" id="anamespacedb_html"><div class="ttname"><a href="namespacedb.html">db</a></div><div class="ttdef"><b>Definition:</b> <a href="dbconnection_8h_source.html#l00007">dbconnection.h:7</a></div></div>
+<div class="ttc" id="astructdb_1_1_db_connection_params_html"><div class="ttname"><a href="structdb_1_1_db_connection_params.html">db::DbConnectionParams</a></div><div class="ttdoc">Параметры подключения к БД</div><div class="ttdef"><b>Definition:</b> <a href="db__connection__params_8h_source.html#l00012">db_connection_params.h:12</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

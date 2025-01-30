@@ -1,0 +1,4 @@
+<map id="db::DbModelBase::closeConnection" name="db::DbModelBase::closeConnection">
+<area shape="rect" id="node1" title="Закрытие cоединение с БД" alt="" coords="5,5,236,32"/>
+<area shape="rect" id="node2" href="$classdb_1_1_db_connection.html#ab7212e9760cffffe172e54770d5c1958" title="Закрыть соединение" alt="" coords="284,5,451,32"/>
+</map>

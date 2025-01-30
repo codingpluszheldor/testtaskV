@@ -1,0 +1,4 @@
+<map id="db::DbConnection::isOpen" name="db::DbConnection::isOpen">
+<area shape="rect" id="node1" title="Проверка соединения" alt="" coords="228,5,404,32"/>
+<area shape="rect" id="node2" href="$classdb_1_1_db_model_base.html#a1de98f7dae3416744a40ada8917acc56" title="Проверка соединения с БД" alt="" coords="5,5,180,32"/>
+</map>

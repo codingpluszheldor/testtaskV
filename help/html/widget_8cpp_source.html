@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TestTaskV: Исходный файл /media/andi/disk3/Andi/Test/TestTaskV/testtaskv/Widget/widget.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TestTaskV
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_b15ab5a0dafaf7c6b5e08632ed057ce4.html">testtaskv</a></li><li class="navelem"><a class="el" href="dir_32b5381ab8598c858e3253202081a905.html">Widget</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">widget.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="widget_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;QMessageBox&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="widget_8h.html">widget.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_widget.html#ace1aa23652eb4425355a81760b39fd37">    5</a></span>&#160;<a class="code" href="class_widget.html#ace1aa23652eb4425355a81760b39fd37">Widget::Widget</a>(QWidget *parent)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    : QWidget(parent)</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    setWindowTitle(tr(<span class="stringliteral">&quot;Таблица счётчиков&quot;</span>));</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    QVBoxLayout *layout = <span class="keyword">new</span> QVBoxLayout(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    _table = <span class="keyword">new</span> QTableWidget(0, 1, <span class="keyword">this</span>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    _table-&gt;setHorizontalHeaderLabels(QStringList() &lt;&lt; tr(<span class="stringliteral">&quot;Счётчик&quot;</span>));</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    _table-&gt;horizontalHeader()-&gt;setSectionResizeMode(0, QHeaderView::Stretch);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    _table-&gt;setSelectionBehavior(QAbstractItemView::SelectRows);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    _table-&gt;setSelectionMode(QAbstractItemView::SingleSelection);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    _table-&gt;setEditTriggers(QAbstractItemView::NoEditTriggers);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    layout-&gt;addWidget(_table);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    QHBoxLayout *buttonLayout = <span class="keyword">new</span> QHBoxLayout();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    _addButton = <span class="keyword">new</span> QPushButton(tr(<span class="stringliteral">&quot;Добавить&quot;</span>), <span class="keyword">this</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    connect(_addButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, [<span class="keyword">this</span>]() {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        emit <a class="code" href="class_widget.html#a2bcfd39a84aa46d7a0f50b80e9e06c4d">signalAddCounter</a>(); }, Qt::QueuedConnection);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    _deleteButton = <span class="keyword">new</span> QPushButton(tr(<span class="stringliteral">&quot;Удалить&quot;</span>), <span class="keyword">this</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    connect(_deleteButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;<a class="code" href="class_widget.html#a8377ffd3dd889f88412717fe93c72df0">Widget::slotDeleteCounter</a>, Qt::QueuedConnection);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    _saveButton = <span class="keyword">new</span> QPushButton(tr(<span class="stringliteral">&quot;Сохранить&quot;</span>), <span class="keyword">this</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    connect(_saveButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, [<span class="keyword">this</span>]() {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        emit <a class="code" href="class_widget.html#a5a2f7fa1ae2b6e97e774a5cd2fb4d320">signalSaveCounters</a>(); }, Qt::QueuedConnection);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    buttonLayout-&gt;addWidget(_addButton);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    buttonLayout-&gt;addWidget(_deleteButton);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    buttonLayout-&gt;addWidget(_saveButton);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    layout-&gt;addLayout(buttonLayout);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    _frequencyLabel = <span class="keyword">new</span> QLabel(tr(<span class="stringliteral">&quot;Частота: 0&quot;</span>), <span class="keyword">this</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    layout-&gt;addWidget(_frequencyLabel);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_widget.html#aa24f66bcbaaec6d458b0980e8c8eae65">   41</a></span>&#160;<a class="code" href="class_widget.html#aa24f66bcbaaec6d458b0980e8c8eae65">Widget::~Widget</a>()</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (_table != <span class="keyword">nullptr</span>) <span class="keyword">delete</span> _table;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">if</span> (_addButton != <span class="keyword">nullptr</span>) <span class="keyword">delete</span> _addButton;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (_deleteButton != <span class="keyword">nullptr</span>) <span class="keyword">delete</span> _deleteButton;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (_saveButton != <span class="keyword">nullptr</span>) <span class="keyword">delete</span> _saveButton;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (_frequencyLabel != <span class="keyword">nullptr</span>) <span class="keyword">delete</span> _frequencyLabel;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_widget.html#abb2a1164618fe6b37c305d6313304264">   50</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_widget.html#abb2a1164618fe6b37c305d6313304264">Widget::slotAddCounter</a>(<span class="keyword">const</span> QString &amp;uuid, <span class="keyword">const</span> <span class="keywordtype">int</span> value)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> row = _table-&gt;rowCount();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    _table-&gt;insertRow(row);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    QTableWidgetItem *item = <span class="keyword">new</span> QTableWidgetItem(QString::number(value));</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    item-&gt;setData(Qt::UserRole, uuid);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    _table-&gt;setItem(row, 0, item);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    qDebug() &lt;&lt; __FUNCTION__;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_widget.html#a8377ffd3dd889f88412717fe93c72df0">   60</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_widget.html#a8377ffd3dd889f88412717fe93c72df0">Widget::slotDeleteCounter</a>()</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">int</span> row = _table-&gt;currentRow();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">if</span> (row &gt;= 0) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        QString uuid = _table-&gt;item(row, 0)-&gt;data(Qt::UserRole).toString();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        _table-&gt;removeRow(row);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        _table-&gt;clearSelection();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        _table-&gt;setCurrentCell(-1, -1);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        emit <a class="code" href="class_widget.html#ade8ba91e4c7d01ffd0c4d7fb5f7d6ab7">signalDeleteCounter</a>(uuid);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    qDebug() &lt;&lt; __FUNCTION__;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_widget.html#a0b7a43029a4d867416e20e3a306c5e67">   73</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_widget.html#a0b7a43029a4d867416e20e3a306c5e67">Widget::slotUpdateCounters</a>(<span class="keyword">const</span> QHash&lt;QString, int&gt; &amp;counters)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">int</span> rowCount = _table-&gt;rowCount();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; rowCount; ++i) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        QString key = _table-&gt;item(i, 0)-&gt;data(Qt::UserRole).toString();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> (counters.contains(key)) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            _table-&gt;item(i, 0)-&gt;setText(QString::number(counters.value(key)));</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    qDebug() &lt;&lt; __FUNCTION__;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_widget.html#a7349c2dc488eeff67ca8fa3ad00f5a6d">   85</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_widget.html#a7349c2dc488eeff67ca8fa3ad00f5a6d">Widget::slotUpdateFrequency</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> &amp;freq)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    _frequencyLabel-&gt;setText(QString(<span class="stringliteral">&quot;Частота: %1&quot;</span>).arg(QString::number(freq, <span class="charliteral">&#39;f&#39;</span>, 1)));</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    qDebug() &lt;&lt; __FUNCTION__;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_widget.html#a04764797c84557efe325373c2d1de7dd">   91</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_widget.html#a04764797c84557efe325373c2d1de7dd">Widget::slotSaveResult</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> &amp;result)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> (result) {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        QMessageBox::information(<span class="keyword">this</span>, tr(<span class="stringliteral">&quot;Сохранено&quot;</span>), tr(<span class="stringliteral">&quot;Счётчики сохранены в БД!&quot;</span>));</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        QMessageBox::critical(<span class="keyword">this</span>, tr(<span class="stringliteral">&quot;Ошибка&quot;</span>), tr(<span class="stringliteral">&quot;Ошибка при сохранении в БД!&quot;</span>));</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="ttc" id="aclass_widget_html_a04764797c84557efe325373c2d1de7dd"><div class="ttname"><a href="class_widget.html#a04764797c84557efe325373c2d1de7dd">Widget::slotSaveResult</a></div><div class="ttdeci">void slotSaveResult(const bool &amp;result)</div><div class="ttdoc">Отображение результата сохранения счётчиков в БД</div><div class="ttdef"><b>Definition:</b> <a href="widget_8cpp_source.html#l00091">widget.cpp:91</a></div></div>
+<div class="ttc" id="aclass_widget_html_a0b7a43029a4d867416e20e3a306c5e67"><div class="ttname"><a href="class_widget.html#a0b7a43029a4d867416e20e3a306c5e67">Widget::slotUpdateCounters</a></div><div class="ttdeci">void slotUpdateCounters(const QHash&lt; QString, int &gt; &amp;counters)</div><div class="ttdoc">Обновление счётчиков в таблице</div><div class="ttdef"><b>Definition:</b> <a href="widget_8cpp_source.html#l00073">widget.cpp:73</a></div></div>
+<div class="ttc" id="aclass_widget_html_a2bcfd39a84aa46d7a0f50b80e9e06c4d"><div class="ttname"><a href="class_widget.html#a2bcfd39a84aa46d7a0f50b80e9e06c4d">Widget::signalAddCounter</a></div><div class="ttdeci">void signalAddCounter()</div><div class="ttdoc">Добавление счётчика</div></div>
+<div class="ttc" id="aclass_widget_html_a5a2f7fa1ae2b6e97e774a5cd2fb4d320"><div class="ttname"><a href="class_widget.html#a5a2f7fa1ae2b6e97e774a5cd2fb4d320">Widget::signalSaveCounters</a></div><div class="ttdeci">void signalSaveCounters()</div><div class="ttdoc">Сохранение счётчиков в БД</div></div>
+<div class="ttc" id="aclass_widget_html_a7349c2dc488eeff67ca8fa3ad00f5a6d"><div class="ttname"><a href="class_widget.html#a7349c2dc488eeff67ca8fa3ad00f5a6d">Widget::slotUpdateFrequency</a></div><div class="ttdeci">void slotUpdateFrequency(const double &amp;freq)</div><div class="ttdoc">Обновление частоты</div><div class="ttdef"><b>Definition:</b> <a href="widget_8cpp_source.html#l00085">widget.cpp:85</a></div></div>
+<div class="ttc" id="aclass_widget_html_a8377ffd3dd889f88412717fe93c72df0"><div class="ttname"><a href="class_widget.html#a8377ffd3dd889f88412717fe93c72df0">Widget::slotDeleteCounter</a></div><div class="ttdeci">void slotDeleteCounter()</div><div class="ttdoc">Удаление счётчика из таблицы</div><div class="ttdef"><b>Definition:</b> <a href="widget_8cpp_source.html#l00060">widget.cpp:60</a></div></div>
+<div class="ttc" id="aclass_widget_html_aa24f66bcbaaec6d458b0980e8c8eae65"><div class="ttname"><a href="class_widget.html#aa24f66bcbaaec6d458b0980e8c8eae65">Widget::~Widget</a></div><div class="ttdeci">~Widget()</div><div class="ttdef"><b>Definition:</b> <a href="widget_8cpp_source.html#l00041">widget.cpp:41</a></div></div>
+<div class="ttc" id="aclass_widget_html_abb2a1164618fe6b37c305d6313304264"><div class="ttname"><a href="class_widget.html#abb2a1164618fe6b37c305d6313304264">Widget::slotAddCounter</a></div><div class="ttdeci">void slotAddCounter(const QString &amp;uuid, const int value)</div><div class="ttdoc">Добавление счётчика в таблицу</div><div class="ttdef"><b>Definition:</b> <a href="widget_8cpp_source.html#l00050">widget.cpp:50</a></div></div>
+<div class="ttc" id="aclass_widget_html_ace1aa23652eb4425355a81760b39fd37"><div class="ttname"><a href="class_widget.html#ace1aa23652eb4425355a81760b39fd37">Widget::Widget</a></div><div class="ttdeci">Widget(QWidget *parent=nullptr)</div><div class="ttdef"><b>Definition:</b> <a href="widget_8cpp_source.html#l00005">widget.cpp:5</a></div></div>
+<div class="ttc" id="aclass_widget_html_ade8ba91e4c7d01ffd0c4d7fb5f7d6ab7"><div class="ttname"><a href="class_widget.html#ade8ba91e4c7d01ffd0c4d7fb5f7d6ab7">Widget::signalDeleteCounter</a></div><div class="ttdeci">void signalDeleteCounter(const QString &amp;uuid)</div><div class="ttdoc">Удаление счётчика</div></div>
+<div class="ttc" id="awidget_8h_html"><div class="ttname"><a href="widget_8h.html">widget.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<map id="db::DbConnection::close" name="db::DbConnection::close">
+<area shape="rect" id="node1" title="Закрыть соединение" alt="" coords="556,56,723,83"/>
+<area shape="rect" id="node2" href="$classdb_1_1_db_model_base.html#a49674f97a7669bfb183032ce56853cae" title="Закрытие cоединение с БД" alt="" coords="277,5,508,32"/>
+<area shape="rect" id="node4" href="$classdb_1_1_db_connection.html#ac130682e08aee5f2409e375ca3bce3ff" title="Повторное соединение" alt="" coords="295,56,490,83"/>
+<area shape="rect" id="node5" href="$classdb_1_1_db_connection.html#a643530423c7954f061b8e6f694bfefea" title=" " alt="" coords="325,107,460,149"/>
+<area shape="rect" id="node3" href="$classdb_1_1_db_model_base.html#afecaaab6e2d52b1e14bd0c75d14e90de" title=" " alt="" coords="5,5,229,32"/>
+</map>

@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TestTaskV: Исходный файл /media/andi/disk3/Andi/Test/TestTaskV/common/include/db_connection_params.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TestTaskV
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bdd9a5d540de89e9fe90efdfc6973a4f.html">common</a></li><li class="navelem"><a class="el" href="dir_11fbc4217d50ab21044e5ad6614aede5.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">db_connection_params.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="db__connection__params_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DB_CONNECTION_PARAMS_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define DB_CONNECTION_PARAMS_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacedb.html">db</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structdb_1_1_db_connection_params.html">   12</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structdb_1_1_db_connection_params.html">DbConnectionParams</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structdb_1_1_db_connection_params.html#a623bf041e8bff2933859d2e6f50efb93">   13</a></span>&#160;    QString <a class="code" href="structdb_1_1_db_connection_params.html#a623bf041e8bff2933859d2e6f50efb93">hostname</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structdb_1_1_db_connection_params.html#ab3971a68a7d8eaeda9f566e63cf37031">   14</a></span>&#160;    QString <a class="code" href="structdb_1_1_db_connection_params.html#ab3971a68a7d8eaeda9f566e63cf37031">driver</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structdb_1_1_db_connection_params.html#a81c156d23fb4640544d517ce4e2831e3">   15</a></span>&#160;    quint16 <a class="code" href="structdb_1_1_db_connection_params.html#a81c156d23fb4640544d517ce4e2831e3">port</a> = 5432; <span class="comment">// PostgreSQL default</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structdb_1_1_db_connection_params.html#a13dc2e53f757cce1e905f82b767e88b2">   16</a></span>&#160;    QString <a class="code" href="structdb_1_1_db_connection_params.html#a13dc2e53f757cce1e905f82b767e88b2">databasename</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structdb_1_1_db_connection_params.html#a8e31bdc49470b4ec4ca184fbf9f7604d">   17</a></span>&#160;    QString <a class="code" href="structdb_1_1_db_connection_params.html#a8e31bdc49470b4ec4ca184fbf9f7604d">username</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structdb_1_1_db_connection_params.html#aebf11ea7026759aaf70bb007d95c9952">   18</a></span>&#160;    QString <a class="code" href="structdb_1_1_db_connection_params.html#aebf11ea7026759aaf70bb007d95c9952">password</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// DB_CONNECTION_PARAMS_H</span></div>
+<div class="ttc" id="anamespacedb_html"><div class="ttname"><a href="namespacedb.html">db</a></div><div class="ttdef"><b>Definition:</b> <a href="dbconnection_8h_source.html#l00007">dbconnection.h:7</a></div></div>
+<div class="ttc" id="astructdb_1_1_db_connection_params_html"><div class="ttname"><a href="structdb_1_1_db_connection_params.html">db::DbConnectionParams</a></div><div class="ttdoc">Параметры подключения к БД</div><div class="ttdef"><b>Definition:</b> <a href="db__connection__params_8h_source.html#l00012">db_connection_params.h:12</a></div></div>
+<div class="ttc" id="astructdb_1_1_db_connection_params_html_a13dc2e53f757cce1e905f82b767e88b2"><div class="ttname"><a href="structdb_1_1_db_connection_params.html#a13dc2e53f757cce1e905f82b767e88b2">db::DbConnectionParams::databasename</a></div><div class="ttdeci">QString databasename</div><div class="ttdef"><b>Definition:</b> <a href="db__connection__params_8h_source.html#l00016">db_connection_params.h:16</a></div></div>
+<div class="ttc" id="astructdb_1_1_db_connection_params_html_a623bf041e8bff2933859d2e6f50efb93"><div class="ttname"><a href="structdb_1_1_db_connection_params.html#a623bf041e8bff2933859d2e6f50efb93">db::DbConnectionParams::hostname</a></div><div class="ttdeci">QString hostname</div><div class="ttdef"><b>Definition:</b> <a href="db__connection__params_8h_source.html#l00013">db_connection_params.h:13</a></div></div>
+<div class="ttc" id="astructdb_1_1_db_connection_params_html_a81c156d23fb4640544d517ce4e2831e3"><div class="ttname"><a href="structdb_1_1_db_connection_params.html#a81c156d23fb4640544d517ce4e2831e3">db::DbConnectionParams::port</a></div><div class="ttdeci">quint16 port</div><div class="ttdef"><b>Definition:</b> <a href="db__connection__params_8h_source.html#l00015">db_connection_params.h:15</a></div></div>
+<div class="ttc" id="astructdb_1_1_db_connection_params_html_a8e31bdc49470b4ec4ca184fbf9f7604d"><div class="ttname"><a href="structdb_1_1_db_connection_params.html#a8e31bdc49470b4ec4ca184fbf9f7604d">db::DbConnectionParams::username</a></div><div class="ttdeci">QString username</div><div class="ttdef"><b>Definition:</b> <a href="db__connection__params_8h_source.html#l00017">db_connection_params.h:17</a></div></div>
+<div class="ttc" id="astructdb_1_1_db_connection_params_html_ab3971a68a7d8eaeda9f566e63cf37031"><div class="ttname"><a href="structdb_1_1_db_connection_params.html#ab3971a68a7d8eaeda9f566e63cf37031">db::DbConnectionParams::driver</a></div><div class="ttdeci">QString driver</div><div class="ttdef"><b>Definition:</b> <a href="db__connection__params_8h_source.html#l00014">db_connection_params.h:14</a></div></div>
+<div class="ttc" id="astructdb_1_1_db_connection_params_html_aebf11ea7026759aaf70bb007d95c9952"><div class="ttname"><a href="structdb_1_1_db_connection_params.html#aebf11ea7026759aaf70bb007d95c9952">db::DbConnectionParams::password</a></div><div class="ttdeci">QString password</div><div class="ttdef"><b>Definition:</b> <a href="db__connection__params_8h_source.html#l00018">db_connection_params.h:18</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

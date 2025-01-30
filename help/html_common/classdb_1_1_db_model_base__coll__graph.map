@@ -1,0 +1,4 @@
+<map id="db::DbModelBase" name="db::DbModelBase">
+<area shape="rect" id="node1" title="Базовая модель данных для БД" alt="" coords="28,95,155,121"/>
+<area shape="rect" id="node2" href="$structdb_1_1_db_connection_params.html" title="Параметры подключения к БД" alt="" coords="5,5,177,32"/>
+</map>

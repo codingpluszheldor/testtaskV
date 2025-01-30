@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TestTaskV: Исходный файл /media/andi/disk3/Andi/Test/TestTaskV/common/DbConnection/dbconnection.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TestTaskV
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bdd9a5d540de89e9fe90efdfc6973a4f.html">common</a></li><li class="navelem"><a class="el" href="dir_cfd0c2f6690a39ab7a8a444db2e6d423.html">DbConnection</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">dbconnection.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="dbconnection_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="dbconnection_8h.html">dbconnection.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacedb.html">db</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classdb_1_1_db_connection.html#a132e6f11563914f0b24e07e065314fa6">    5</a></span>&#160;<a class="code" href="classdb_1_1_db_connection.html#a132e6f11563914f0b24e07e065314fa6">DbConnection::DbConnection</a>(<span class="keyword">const</span> QString &amp;alias,</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                           <span class="keyword">const</span> QString &amp;hostname,</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                           <span class="keyword">const</span> QString &amp;driver,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                           <span class="keyword">const</span> quint16 &amp;port,</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                           <span class="keyword">const</span> QString &amp;databasename,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                           <span class="keyword">const</span> QString &amp;username,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                           <span class="keyword">const</span> QString &amp;password) noexcept</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    : _alias(alias),</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;      _hostname(hostname),</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      _driver(driver),</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      _port(port),</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      _databasename(databasename),</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      _username(username),</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      _password(password)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classdb_1_1_db_connection.html#a643530423c7954f061b8e6f694bfefea">   23</a></span>&#160;<a class="code" href="classdb_1_1_db_connection.html#a643530423c7954f061b8e6f694bfefea">DbConnection::~DbConnection</a>()</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classdb_1_1_db_connection.html#ab7212e9760cffffe172e54770d5c1958">close</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classdb_1_1_db_connection.html#a0fd938a5c9963964a7ee6c88f7268588">   28</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classdb_1_1_db_connection.html#a0fd938a5c9963964a7ee6c88f7268588">DbConnection::open</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    QSqlDatabase <a class="code" href="namespacedb.html">db</a> = QSqlDatabase::addDatabase(_driver, _alias);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="namespacedb.html">db</a>.setHostName(_hostname);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="namespacedb.html">db</a>.setPort(_port);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="namespacedb.html">db</a>.setDatabaseName(_databasename);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="namespacedb.html">db</a>.setUserName(_username);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="namespacedb.html">db</a>.setPassword(_password);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacedb.html">db</a>.open();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classdb_1_1_db_connection.html#ab7212e9760cffffe172e54770d5c1958">   40</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classdb_1_1_db_connection.html#ab7212e9760cffffe172e54770d5c1958">DbConnection::close</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    QSqlDatabase <a class="code" href="namespacedb.html">db</a> = QSqlDatabase::database(_alias);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="namespacedb.html">db</a>.close();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classdb_1_1_db_connection.html#ac9b2ab1aec98003993b80277c4fd9e6f">   46</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classdb_1_1_db_connection.html#ab7212e9760cffffe172e54770d5c1958">DbConnection::close</a>(<span class="keyword">const</span> QString &amp;alias)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    QSqlDatabase <a class="code" href="namespacedb.html">db</a> = QSqlDatabase::database(alias);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="namespacedb.html">db</a>.close();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classdb_1_1_db_connection.html#ab5967f6993226856cf0b50ef900d71a7">   52</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classdb_1_1_db_connection.html#ab5967f6993226856cf0b50ef900d71a7">DbConnection::isOpen</a>(<span class="keyword">const</span> QString &amp;alias)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    QSqlDatabase <a class="code" href="namespacedb.html">db</a> = QSqlDatabase::database(alias);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacedb.html">db</a>.isOpen();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classdb_1_1_db_connection.html#ac130682e08aee5f2409e375ca3bce3ff">   58</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classdb_1_1_db_connection.html#ac130682e08aee5f2409e375ca3bce3ff">DbConnection::reConnect</a>(<span class="keyword">const</span> quint16 &amp;count)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; count; i++)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        this-&gt;<a class="code" href="classdb_1_1_db_connection.html#ab7212e9760cffffe172e54770d5c1958">close</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        QSqlDatabase::removeDatabase(_alias);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        QSqlDatabase <a class="code" href="namespacedb.html">db</a> = QSqlDatabase::addDatabase(_driver, _alias);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="namespacedb.html">db</a>.setHostName(_hostname);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="namespacedb.html">db</a>.setPort(_port);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="namespacedb.html">db</a>.setDatabaseName(_databasename);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="namespacedb.html">db</a>.setUserName(_username);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="namespacedb.html">db</a>.setPassword(_password);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespacedb.html">db</a>.open()) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classdb_1_1_db_connection.html#ab480d3d11dc5fb0be91170dbde26197d">   78</a></span>&#160;QString <a class="code" href="classdb_1_1_db_connection.html#ab480d3d11dc5fb0be91170dbde26197d">DbConnection::error</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    QSqlDatabase <a class="code" href="namespacedb.html">db</a> = QSqlDatabase::database(_alias);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacedb.html">db</a>.lastError().text();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="ttc" id="aclassdb_1_1_db_connection_html_a0fd938a5c9963964a7ee6c88f7268588"><div class="ttname"><a href="classdb_1_1_db_connection.html#a0fd938a5c9963964a7ee6c88f7268588">db::DbConnection::open</a></div><div class="ttdeci">bool open() const</div><div class="ttdoc">Открыть соединение</div><div class="ttdef"><b>Definition:</b> <a href="dbconnection_8cpp_source.html#l00028">dbconnection.cpp:28</a></div></div>
+<div class="ttc" id="aclassdb_1_1_db_connection_html_a132e6f11563914f0b24e07e065314fa6"><div class="ttname"><a href="classdb_1_1_db_connection.html#a132e6f11563914f0b24e07e065314fa6">db::DbConnection::DbConnection</a></div><div class="ttdeci">DbConnection(const QString &amp;alias, const QString &amp;hostname, const QString &amp;driver, const quint16 &amp;port, const QString &amp;databasename, const QString &amp;username, const QString &amp;password) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="dbconnection_8cpp_source.html#l00005">dbconnection.cpp:5</a></div></div>
+<div class="ttc" id="aclassdb_1_1_db_connection_html_a643530423c7954f061b8e6f694bfefea"><div class="ttname"><a href="classdb_1_1_db_connection.html#a643530423c7954f061b8e6f694bfefea">db::DbConnection::~DbConnection</a></div><div class="ttdeci">virtual ~DbConnection()</div><div class="ttdef"><b>Definition:</b> <a href="dbconnection_8cpp_source.html#l00023">dbconnection.cpp:23</a></div></div>
+<div class="ttc" id="aclassdb_1_1_db_connection_html_ab480d3d11dc5fb0be91170dbde26197d"><div class="ttname"><a href="classdb_1_1_db_connection.html#ab480d3d11dc5fb0be91170dbde26197d">db::DbConnection::error</a></div><div class="ttdeci">QString error() const</div><div class="ttdoc">Возвращает текст ошибки</div><div class="ttdef"><b>Definition:</b> <a href="dbconnection_8cpp_source.html#l00078">dbconnection.cpp:78</a></div></div>
+<div class="ttc" id="aclassdb_1_1_db_connection_html_ab5967f6993226856cf0b50ef900d71a7"><div class="ttname"><a href="classdb_1_1_db_connection.html#ab5967f6993226856cf0b50ef900d71a7">db::DbConnection::isOpen</a></div><div class="ttdeci">static bool isOpen(const QString &amp;alias)</div><div class="ttdoc">Проверка соединения</div><div class="ttdef"><b>Definition:</b> <a href="dbconnection_8cpp_source.html#l00052">dbconnection.cpp:52</a></div></div>
+<div class="ttc" id="aclassdb_1_1_db_connection_html_ab7212e9760cffffe172e54770d5c1958"><div class="ttname"><a href="classdb_1_1_db_connection.html#ab7212e9760cffffe172e54770d5c1958">db::DbConnection::close</a></div><div class="ttdeci">void close() const</div><div class="ttdoc">Закрыть соединение</div><div class="ttdef"><b>Definition:</b> <a href="dbconnection_8cpp_source.html#l00040">dbconnection.cpp:40</a></div></div>
+<div class="ttc" id="aclassdb_1_1_db_connection_html_ac130682e08aee5f2409e375ca3bce3ff"><div class="ttname"><a href="classdb_1_1_db_connection.html#ac130682e08aee5f2409e375ca3bce3ff">db::DbConnection::reConnect</a></div><div class="ttdeci">bool reConnect(const quint16 &amp;count) const</div><div class="ttdoc">Повторное соединение</div><div class="ttdef"><b>Definition:</b> <a href="dbconnection_8cpp_source.html#l00058">dbconnection.cpp:58</a></div></div>
+<div class="ttc" id="adbconnection_8h_html"><div class="ttname"><a href="dbconnection_8h.html">dbconnection.h</a></div></div>
+<div class="ttc" id="anamespacedb_html"><div class="ttname"><a href="namespacedb.html">db</a></div><div class="ttdef"><b>Definition:</b> <a href="dbconnection_8h_source.html#l00007">dbconnection.h:7</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

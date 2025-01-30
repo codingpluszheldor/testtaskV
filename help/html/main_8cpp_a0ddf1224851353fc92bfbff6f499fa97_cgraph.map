@@ -1,0 +1,12 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,183,56,209"/>
+<area shape="rect" id="node2" href="$class_application.html#a8cf8941c8db90117d3735bce5ae1fdf4" title="Запуск цикла событий" alt="" coords="104,183,216,209"/>
+<area shape="rect" id="node3" href="$class_controller.html#aabff3dbd50a3d0d127c40c062aa28e78" title="Добавление счётчика" alt="" coords="285,5,461,32"/>
+<area shape="rect" id="node4" href="$class_widget.html#abb2a1164618fe6b37c305d6313304264" title="Добавление счётчика в таблицу" alt="" coords="293,56,454,83"/>
+<area shape="rect" id="node5" href="$class_controller.html#a9a49309d1da1c16a766f521c66b69356" title="Удаление счётчика" alt="" coords="278,107,469,133"/>
+<area shape="rect" id="node6" href="$class_controller.html#a1dc831dbec6c5874a0363690a4255467" title="Сохранение счётчиков в БД" alt="" coords="278,157,469,184"/>
+<area shape="rect" id="node7" href="$class_widget.html#a04764797c84557efe325373c2d1de7dd" title="Отображение результата сохранения счётчиков в БД" alt="" coords="294,208,453,235"/>
+<area shape="rect" id="node8" href="$class_controller.html#a5dedf2a13b1fd0069dff9f4bd67f8e78" title="Запуск потока инкрементирования счётчиков" alt="" coords="264,259,483,285"/>
+<area shape="rect" id="node9" href="$class_widget.html#a0b7a43029a4d867416e20e3a306c5e67" title="Обновление счётчиков в таблице" alt="" coords="279,309,467,336"/>
+<area shape="rect" id="node10" href="$class_widget.html#a7349c2dc488eeff67ca8fa3ad00f5a6d" title="Обновление частоты" alt="" coords="276,360,471,387"/>
+</map>

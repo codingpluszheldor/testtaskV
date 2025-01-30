@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TestTaskV: Исходный файл /media/andi/disk3/Andi/Test/TestTaskV/testtaskv/Application/application.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TestTaskV
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_b15ab5a0dafaf7c6b5e08632ed057ce4.html">testtaskv</a></li><li class="navelem"><a class="el" href="dir_1366ff4201f4dc4140ccc6365e609b3d.html">Application</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">application.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="application_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;QScopedPointer&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="application_8h.html">application.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="controller_8h.html">Controller/controller.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;Settings/settings.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="widget_8h.html">Widget/widget.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;include/db_connection_params.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using namespace </span>config;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_application.html#a2dfafa9e3ba32c4dd04c8e25c5a18857">   11</a></span>&#160;<a class="code" href="class_application.html#a2dfafa9e3ba32c4dd04c8e25c5a18857">Application::Application</a>(<span class="keywordtype">int</span> &amp;argc, <span class="keywordtype">char</span> **argv) noexcept</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    : QApplication(argc, argv)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_application.html#a748bca84fefb9c12661cfaa2f623748d">   16</a></span>&#160;<a class="code" href="class_application.html#a748bca84fefb9c12661cfaa2f623748d">Application::~Application</a>()</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_application.html#a8cf8941c8db90117d3735bce5ae1fdf4">   20</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_application.html#a8cf8941c8db90117d3735bce5ae1fdf4">Application::run</a>()</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    Settings *settings = &amp;Settings::Instance();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    Q_CHECK_PTR(settings);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    settings-&gt;readConfig();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (!settings-&gt;isReady()) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        db::DbConnectionParams params;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        params.databasename = <span class="stringliteral">&quot;counters.db&quot;</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        params.driver = <span class="stringliteral">&quot;QSQLITE&quot;</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        settings-&gt;setConfigDb(params);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        settings-&gt;saveConfig();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    QScopedPointer&lt;Controller&gt; controller(<span class="keyword">new</span> <a class="code" href="class_controller.html">Controller</a>(<span class="keyword">this</span>));</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    connect(<span class="keyword">this</span>, &amp;<a class="code" href="class_application.html#ae940cd57f2cc044f1f576927c844946f">Application::signalStartCountersLoop</a>,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            controller.data(), &amp;<a class="code" href="class_controller.html#a5dedf2a13b1fd0069dff9f4bd67f8e78">Controller::slotStartCountersLoop</a>, Qt::QueuedConnection);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    QScopedPointer&lt;Widget&gt; window(<span class="keyword">new</span> <a class="code" href="class_widget.html">Widget</a>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    connect(window.data(), &amp;<a class="code" href="class_widget.html#a2bcfd39a84aa46d7a0f50b80e9e06c4d">Widget::signalAddCounter</a>,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            controller.data(), &amp;<a class="code" href="class_controller.html#aabff3dbd50a3d0d127c40c062aa28e78">Controller::slotAddCounter</a>, Qt::QueuedConnection);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    connect(window.data(), &amp;<a class="code" href="class_widget.html#ade8ba91e4c7d01ffd0c4d7fb5f7d6ab7">Widget::signalDeleteCounter</a>,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            controller.data(), &amp;<a class="code" href="class_controller.html#a9a49309d1da1c16a766f521c66b69356">Controller::slotDeleteCounter</a>, Qt::QueuedConnection);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    connect(window.data(), &amp;<a class="code" href="class_widget.html#a5a2f7fa1ae2b6e97e774a5cd2fb4d320">Widget::signalSaveCounters</a>,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            controller.data(), &amp;<a class="code" href="class_controller.html#a1dc831dbec6c5874a0363690a4255467">Controller::slotSaveCounters</a>, Qt::QueuedConnection);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    connect(controller.data(), &amp;<a class="code" href="class_controller.html#a0f72492588b2fe86aa26723c2f57e05e">Controller::signalAddCounter</a>,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            window.data(), &amp;<a class="code" href="class_widget.html#abb2a1164618fe6b37c305d6313304264">Widget::slotAddCounter</a>, Qt::QueuedConnection);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    connect(controller.data(), &amp;<a class="code" href="class_controller.html#a2dd0b5a9b7a201fd2ca5bdc3252b2ef3">Controller::signalUpdateCounters</a>,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            window.data(), &amp;<a class="code" href="class_widget.html#a0b7a43029a4d867416e20e3a306c5e67">Widget::slotUpdateCounters</a>, Qt::QueuedConnection);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    connect(controller.data(), &amp;<a class="code" href="class_controller.html#a9064e6b4d80beb633d6dd69dfc268042">Controller::signalUpdateFrequency</a>,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            window.data(), &amp;<a class="code" href="class_widget.html#a7349c2dc488eeff67ca8fa3ad00f5a6d">Widget::slotUpdateFrequency</a>, Qt::QueuedConnection);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    connect(controller.data(), &amp;<a class="code" href="class_controller.html#af56a5ad772880700512869db38f9adf2">Controller::signalSaveResult</a>,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            window.data(), &amp;<a class="code" href="class_widget.html#a04764797c84557efe325373c2d1de7dd">Widget::slotSaveResult</a>, Qt::QueuedConnection);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    window-&gt;resize(640, 480);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    window-&gt;show();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    emit signalStartCountersLoop();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> exec();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="ttc" id="aapplication_8h_html"><div class="ttname"><a href="application_8h.html">application.h</a></div></div>
+<div class="ttc" id="aclass_application_html_a2dfafa9e3ba32c4dd04c8e25c5a18857"><div class="ttname"><a href="class_application.html#a2dfafa9e3ba32c4dd04c8e25c5a18857">Application::Application</a></div><div class="ttdeci">Application(int &amp;argc, char **argv) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="application_8cpp_source.html#l00011">application.cpp:11</a></div></div>
+<div class="ttc" id="aclass_application_html_a748bca84fefb9c12661cfaa2f623748d"><div class="ttname"><a href="class_application.html#a748bca84fefb9c12661cfaa2f623748d">Application::~Application</a></div><div class="ttdeci">virtual ~Application()</div><div class="ttdef"><b>Definition:</b> <a href="application_8cpp_source.html#l00016">application.cpp:16</a></div></div>
+<div class="ttc" id="aclass_application_html_a8cf8941c8db90117d3735bce5ae1fdf4"><div class="ttname"><a href="class_application.html#a8cf8941c8db90117d3735bce5ae1fdf4">Application::run</a></div><div class="ttdeci">int run()</div><div class="ttdoc">Запуск цикла событий</div><div class="ttdef"><b>Definition:</b> <a href="application_8cpp_source.html#l00020">application.cpp:20</a></div></div>
+<div class="ttc" id="aclass_application_html_ae940cd57f2cc044f1f576927c844946f"><div class="ttname"><a href="class_application.html#ae940cd57f2cc044f1f576927c844946f">Application::signalStartCountersLoop</a></div><div class="ttdeci">void signalStartCountersLoop()</div><div class="ttdoc">Запуск потока инкрементирования счётчиков</div></div>
+<div class="ttc" id="aclass_controller_html"><div class="ttname"><a href="class_controller.html">Controller</a></div><div class="ttdoc">Контроллер приложения</div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00017">controller.h:18</a></div></div>
+<div class="ttc" id="aclass_controller_html_a0f72492588b2fe86aa26723c2f57e05e"><div class="ttname"><a href="class_controller.html#a0f72492588b2fe86aa26723c2f57e05e">Controller::signalAddCounter</a></div><div class="ttdeci">void signalAddCounter(const QString &amp;uuid, const int value)</div><div class="ttdoc">Добавление счётчика в таблицу</div></div>
+<div class="ttc" id="aclass_controller_html_a1dc831dbec6c5874a0363690a4255467"><div class="ttname"><a href="class_controller.html#a1dc831dbec6c5874a0363690a4255467">Controller::slotSaveCounters</a></div><div class="ttdeci">void slotSaveCounters()</div><div class="ttdoc">Сохранение счётчиков в БД</div><div class="ttdef"><b>Definition:</b> <a href="controller_8cpp_source.html#l00114">controller.cpp:114</a></div></div>
+<div class="ttc" id="aclass_controller_html_a2dd0b5a9b7a201fd2ca5bdc3252b2ef3"><div class="ttname"><a href="class_controller.html#a2dd0b5a9b7a201fd2ca5bdc3252b2ef3">Controller::signalUpdateCounters</a></div><div class="ttdeci">void signalUpdateCounters(const QHash&lt; QString, int &gt; &amp;counters)</div><div class="ttdoc">Обновление счётчиков в таблице</div></div>
+<div class="ttc" id="aclass_controller_html_a5dedf2a13b1fd0069dff9f4bd67f8e78"><div class="ttname"><a href="class_controller.html#a5dedf2a13b1fd0069dff9f4bd67f8e78">Controller::slotStartCountersLoop</a></div><div class="ttdeci">void slotStartCountersLoop()</div><div class="ttdoc">Запуск потока инкрементирования счётчиков</div><div class="ttdef"><b>Definition:</b> <a href="controller_8cpp_source.html#l00029">controller.cpp:29</a></div></div>
+<div class="ttc" id="aclass_controller_html_a9064e6b4d80beb633d6dd69dfc268042"><div class="ttname"><a href="class_controller.html#a9064e6b4d80beb633d6dd69dfc268042">Controller::signalUpdateFrequency</a></div><div class="ttdeci">void signalUpdateFrequency(const double &amp;freq)</div><div class="ttdoc">Обновление частоты</div></div>
+<div class="ttc" id="aclass_controller_html_a9a49309d1da1c16a766f521c66b69356"><div class="ttname"><a href="class_controller.html#a9a49309d1da1c16a766f521c66b69356">Controller::slotDeleteCounter</a></div><div class="ttdeci">void slotDeleteCounter(const QString &amp;uuid)</div><div class="ttdoc">Удаление счётчика</div><div class="ttdef"><b>Definition:</b> <a href="controller_8cpp_source.html#l00103">controller.cpp:103</a></div></div>
+<div class="ttc" id="aclass_controller_html_aabff3dbd50a3d0d127c40c062aa28e78"><div class="ttname"><a href="class_controller.html#aabff3dbd50a3d0d127c40c062aa28e78">Controller::slotAddCounter</a></div><div class="ttdeci">void slotAddCounter()</div><div class="ttdoc">Добавление счётчика</div><div class="ttdef"><b>Definition:</b> <a href="controller_8cpp_source.html#l00094">controller.cpp:94</a></div></div>
+<div class="ttc" id="aclass_controller_html_af56a5ad772880700512869db38f9adf2"><div class="ttname"><a href="class_controller.html#af56a5ad772880700512869db38f9adf2">Controller::signalSaveResult</a></div><div class="ttdeci">void signalSaveResult(const bool &amp;result)</div><div class="ttdoc">Результат сохранения счётчиков в БД</div></div>
+<div class="ttc" id="aclass_widget_html"><div class="ttname"><a href="class_widget.html">Widget</a></div><div class="ttdoc">Главное окно приложения</div><div class="ttdef"><b>Definition:</b> <a href="widget_8h_source.html#l00015">widget.h:16</a></div></div>
+<div class="ttc" id="aclass_widget_html_a04764797c84557efe325373c2d1de7dd"><div class="ttname"><a href="class_widget.html#a04764797c84557efe325373c2d1de7dd">Widget::slotSaveResult</a></div><div class="ttdeci">void slotSaveResult(const bool &amp;result)</div><div class="ttdoc">Отображение результата сохранения счётчиков в БД</div><div class="ttdef"><b>Definition:</b> <a href="widget_8cpp_source.html#l00091">widget.cpp:91</a></div></div>
+<div class="ttc" id="aclass_widget_html_a0b7a43029a4d867416e20e3a306c5e67"><div class="ttname"><a href="class_widget.html#a0b7a43029a4d867416e20e3a306c5e67">Widget::slotUpdateCounters</a></div><div class="ttdeci">void slotUpdateCounters(const QHash&lt; QString, int &gt; &amp;counters)</div><div class="ttdoc">Обновление счётчиков в таблице</div><div class="ttdef"><b>Definition:</b> <a href="widget_8cpp_source.html#l00073">widget.cpp:73</a></div></div>
+<div class="ttc" id="aclass_widget_html_a2bcfd39a84aa46d7a0f50b80e9e06c4d"><div class="ttname"><a href="class_widget.html#a2bcfd39a84aa46d7a0f50b80e9e06c4d">Widget::signalAddCounter</a></div><div class="ttdeci">void signalAddCounter()</div><div class="ttdoc">Добавление счётчика</div></div>
+<div class="ttc" id="aclass_widget_html_a5a2f7fa1ae2b6e97e774a5cd2fb4d320"><div class="ttname"><a href="class_widget.html#a5a2f7fa1ae2b6e97e774a5cd2fb4d320">Widget::signalSaveCounters</a></div><div class="ttdeci">void signalSaveCounters()</div><div class="ttdoc">Сохранение счётчиков в БД</div></div>
+<div class="ttc" id="aclass_widget_html_a7349c2dc488eeff67ca8fa3ad00f5a6d"><div class="ttname"><a href="class_widget.html#a7349c2dc488eeff67ca8fa3ad00f5a6d">Widget::slotUpdateFrequency</a></div><div class="ttdeci">void slotUpdateFrequency(const double &amp;freq)</div><div class="ttdoc">Обновление частоты</div><div class="ttdef"><b>Definition:</b> <a href="widget_8cpp_source.html#l00085">widget.cpp:85</a></div></div>
+<div class="ttc" id="aclass_widget_html_abb2a1164618fe6b37c305d6313304264"><div class="ttname"><a href="class_widget.html#abb2a1164618fe6b37c305d6313304264">Widget::slotAddCounter</a></div><div class="ttdeci">void slotAddCounter(const QString &amp;uuid, const int value)</div><div class="ttdoc">Добавление счётчика в таблицу</div><div class="ttdef"><b>Definition:</b> <a href="widget_8cpp_source.html#l00050">widget.cpp:50</a></div></div>
+<div class="ttc" id="aclass_widget_html_ade8ba91e4c7d01ffd0c4d7fb5f7d6ab7"><div class="ttname"><a href="class_widget.html#ade8ba91e4c7d01ffd0c4d7fb5f7d6ab7">Widget::signalDeleteCounter</a></div><div class="ttdeci">void signalDeleteCounter(const QString &amp;uuid)</div><div class="ttdoc">Удаление счётчика</div></div>
+<div class="ttc" id="acontroller_8h_html"><div class="ttname"><a href="controller_8h.html">controller.h</a></div></div>
+<div class="ttc" id="awidget_8h_html"><div class="ttname"><a href="widget_8h.html">widget.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<map id="db::DbModelBase::setConnection" name="db::DbModelBase::setConnection">
+<area shape="rect" id="node1" title="Соединение с БД" alt="" coords="5,31,224,57"/>
+<area shape="rect" id="node2" href="$classdb_1_1_db_connection.html#ab480d3d11dc5fb0be91170dbde26197d" title="Возвращает текст ошибки" alt="" coords="273,5,434,32"/>
+<area shape="rect" id="node3" href="$classdb_1_1_db_connection.html#a0fd938a5c9963964a7ee6c88f7268588" title="Открыть соединение" alt="" coords="272,56,435,83"/>
+</map>

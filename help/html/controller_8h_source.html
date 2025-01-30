@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TestTaskV: Исходный файл /media/andi/disk3/Andi/Test/TestTaskV/testtaskv/Controller/controller.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TestTaskV
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_b15ab5a0dafaf7c6b5e08632ed057ce4.html">testtaskv</a></li><li class="navelem"><a class="el" href="dir_787b8b0a5ea22419403f3e6fa6679c9a.html">Controller</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">controller.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="controller_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CONTROLLER_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CONTROLLER_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QHash&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QMutex&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QMutexLocker&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QScopedPointer&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="dbmodelcounters_8h.html">DbModelCounters/dbmodelcounters.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_controller.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_controller.html">Controller</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    QHash&lt;QString, int&gt; _counters; <span class="comment">// Счётчики: key - uuid, value - текущее значение</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    QMutex _mutex;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::atomic&lt;bool&gt; _running {<span class="keyword">true</span>};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::thread _incThread;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::chrono::steady_clock::time_point _lastTime = std::chrono::steady_clock::now();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">int</span> _sumCounters = 0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">int</span> _lastSum = 0;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">double</span> _lastFrequency = 0.0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    QScopedPointer&lt;db::DbModelCounters&gt; _model;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_controller.html#affd74807d9fc56f06c3c54bb32f9010a">Controller</a>(QObject *parent = 0) noexcept;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_controller.html#a0ab87934c4f7a266cfdb86e0f36bc1b5">~Controller</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> incrementCounters();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> calculateFrequency();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_controller.html#a5dedf2a13b1fd0069dff9f4bd67f8e78">slotStartCountersLoop</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_controller.html#aabff3dbd50a3d0d127c40c062aa28e78">slotAddCounter</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_controller.html#a9a49309d1da1c16a766f521c66b69356">slotDeleteCounter</a>(<span class="keyword">const</span> QString &amp;uuid);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_controller.html#a1dc831dbec6c5874a0363690a4255467">slotSaveCounters</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;signals:</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_controller.html#a0f72492588b2fe86aa26723c2f57e05e">   75</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_controller.html#a0f72492588b2fe86aa26723c2f57e05e">signalAddCounter</a>(<span class="keyword">const</span> QString &amp;uuid, <span class="keyword">const</span> <span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_controller.html#a2dd0b5a9b7a201fd2ca5bdc3252b2ef3">   81</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_controller.html#a2dd0b5a9b7a201fd2ca5bdc3252b2ef3">signalUpdateCounters</a>(<span class="keyword">const</span> QHash&lt;QString, int&gt; &amp;counters);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_controller.html#a9064e6b4d80beb633d6dd69dfc268042">   87</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_controller.html#a9064e6b4d80beb633d6dd69dfc268042">signalUpdateFrequency</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> &amp;freq);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_controller.html#af56a5ad772880700512869db38f9adf2">   93</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_controller.html#af56a5ad772880700512869db38f9adf2">signalSaveResult</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> &amp;result);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// CONTROLLER_H</span></div>
+<div class="ttc" id="aclass_controller_html"><div class="ttname"><a href="class_controller.html">Controller</a></div><div class="ttdoc">Контроллер приложения</div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00017">controller.h:18</a></div></div>
+<div class="ttc" id="aclass_controller_html_a0ab87934c4f7a266cfdb86e0f36bc1b5"><div class="ttname"><a href="class_controller.html#a0ab87934c4f7a266cfdb86e0f36bc1b5">Controller::~Controller</a></div><div class="ttdeci">~Controller()</div><div class="ttdef"><b>Definition:</b> <a href="controller_8cpp_source.html#l00018">controller.cpp:18</a></div></div>
+<div class="ttc" id="aclass_controller_html_a0f72492588b2fe86aa26723c2f57e05e"><div class="ttname"><a href="class_controller.html#a0f72492588b2fe86aa26723c2f57e05e">Controller::signalAddCounter</a></div><div class="ttdeci">void signalAddCounter(const QString &amp;uuid, const int value)</div><div class="ttdoc">Добавление счётчика в таблицу</div></div>
+<div class="ttc" id="aclass_controller_html_a1dc831dbec6c5874a0363690a4255467"><div class="ttname"><a href="class_controller.html#a1dc831dbec6c5874a0363690a4255467">Controller::slotSaveCounters</a></div><div class="ttdeci">void slotSaveCounters()</div><div class="ttdoc">Сохранение счётчиков в БД</div><div class="ttdef"><b>Definition:</b> <a href="controller_8cpp_source.html#l00114">controller.cpp:114</a></div></div>
+<div class="ttc" id="aclass_controller_html_a2dd0b5a9b7a201fd2ca5bdc3252b2ef3"><div class="ttname"><a href="class_controller.html#a2dd0b5a9b7a201fd2ca5bdc3252b2ef3">Controller::signalUpdateCounters</a></div><div class="ttdeci">void signalUpdateCounters(const QHash&lt; QString, int &gt; &amp;counters)</div><div class="ttdoc">Обновление счётчиков в таблице</div></div>
+<div class="ttc" id="aclass_controller_html_a5dedf2a13b1fd0069dff9f4bd67f8e78"><div class="ttname"><a href="class_controller.html#a5dedf2a13b1fd0069dff9f4bd67f8e78">Controller::slotStartCountersLoop</a></div><div class="ttdeci">void slotStartCountersLoop()</div><div class="ttdoc">Запуск потока инкрементирования счётчиков</div><div class="ttdef"><b>Definition:</b> <a href="controller_8cpp_source.html#l00029">controller.cpp:29</a></div></div>
+<div class="ttc" id="aclass_controller_html_a9064e6b4d80beb633d6dd69dfc268042"><div class="ttname"><a href="class_controller.html#a9064e6b4d80beb633d6dd69dfc268042">Controller::signalUpdateFrequency</a></div><div class="ttdeci">void signalUpdateFrequency(const double &amp;freq)</div><div class="ttdoc">Обновление частоты</div></div>
+<div class="ttc" id="aclass_controller_html_a9a49309d1da1c16a766f521c66b69356"><div class="ttname"><a href="class_controller.html#a9a49309d1da1c16a766f521c66b69356">Controller::slotDeleteCounter</a></div><div class="ttdeci">void slotDeleteCounter(const QString &amp;uuid)</div><div class="ttdoc">Удаление счётчика</div><div class="ttdef"><b>Definition:</b> <a href="controller_8cpp_source.html#l00103">controller.cpp:103</a></div></div>
+<div class="ttc" id="aclass_controller_html_aabff3dbd50a3d0d127c40c062aa28e78"><div class="ttname"><a href="class_controller.html#aabff3dbd50a3d0d127c40c062aa28e78">Controller::slotAddCounter</a></div><div class="ttdeci">void slotAddCounter()</div><div class="ttdoc">Добавление счётчика</div><div class="ttdef"><b>Definition:</b> <a href="controller_8cpp_source.html#l00094">controller.cpp:94</a></div></div>
+<div class="ttc" id="aclass_controller_html_af56a5ad772880700512869db38f9adf2"><div class="ttname"><a href="class_controller.html#af56a5ad772880700512869db38f9adf2">Controller::signalSaveResult</a></div><div class="ttdeci">void signalSaveResult(const bool &amp;result)</div><div class="ttdoc">Результат сохранения счётчиков в БД</div></div>
+<div class="ttc" id="aclass_controller_html_affd74807d9fc56f06c3c54bb32f9010a"><div class="ttname"><a href="class_controller.html#affd74807d9fc56f06c3c54bb32f9010a">Controller::Controller</a></div><div class="ttdeci">Controller(QObject *parent=0) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="controller_8cpp_source.html#l00009">controller.cpp:9</a></div></div>
+<div class="ttc" id="adbmodelcounters_8h_html"><div class="ttname"><a href="dbmodelcounters_8h.html">dbmodelcounters.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

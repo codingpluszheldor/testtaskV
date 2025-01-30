@@ -1,0 +1,5 @@
+<map id="db::DbModelBase::~DbModelBase" name="db::DbModelBase::~DbModelBase">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,229,32"/>
+<area shape="rect" id="node2" href="$classdb_1_1_db_model_base.html#a49674f97a7669bfb183032ce56853cae" title="Закрытие cоединение с БД" alt="" coords="277,5,508,32"/>
+<area shape="rect" id="node3" href="$classdb_1_1_db_connection.html#ab7212e9760cffffe172e54770d5c1958" title="Закрыть соединение" alt="" coords="556,5,723,32"/>
+</map>
